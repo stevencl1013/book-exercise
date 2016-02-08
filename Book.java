@@ -53,7 +53,14 @@ class Book
     
     public void printDetails()
     {
-        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+        if(refNumber.length() == 0)
+        {
+            System.out.println("Title: "+title+", Author: "+author+", Pages: "+pages+", Reference Number: ZZZ");
+        }
+        else
+        {
+            System.out.println("Title: "+title+", Author: "+author+", Pages: "+pages+", Reference Number: "+refNumber); 
+        }
     }
     
     public void setRefNumber(String ref)
@@ -65,4 +72,5 @@ class Book
     {
         return refNumber;
     }
+    
 }
